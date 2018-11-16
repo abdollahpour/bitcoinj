@@ -302,7 +302,7 @@ public final class PeerSeedProtos {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       if (hasIpAddress()) {
         hash = (37 * hash) + IP_ADDRESS_FIELD_NUMBER;
         hash = (53 * hash) + getIpAddress().hashCode();
@@ -320,6 +320,17 @@ public final class PeerSeedProtos {
       return hash;
     }
 
+    public static org.bitcoin.crawler.PeerSeedProtos.PeerSeedData parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.bitcoin.crawler.PeerSeedProtos.PeerSeedData parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static org.bitcoin.crawler.PeerSeedProtos.PeerSeedData parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -1098,7 +1109,7 @@ public final class PeerSeedProtos {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       if (getSeedCount() > 0) {
         hash = (37 * hash) + SEED_FIELD_NUMBER;
         hash = (53 * hash) + getSeedList().hashCode();
@@ -1117,6 +1128,17 @@ public final class PeerSeedProtos {
       return hash;
     }
 
+    public static org.bitcoin.crawler.PeerSeedProtos.PeerSeeds parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.bitcoin.crawler.PeerSeedProtos.PeerSeeds parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static org.bitcoin.crawler.PeerSeedProtos.PeerSeeds parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -2065,7 +2087,7 @@ public final class PeerSeedProtos {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       if (hasPeerSeeds()) {
         hash = (37 * hash) + PEER_SEEDS_FIELD_NUMBER;
         hash = (53 * hash) + getPeerSeeds().hashCode();
@@ -2083,6 +2105,17 @@ public final class PeerSeedProtos {
       return hash;
     }
 
+    public static org.bitcoin.crawler.PeerSeedProtos.SignedPeerSeeds parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.bitcoin.crawler.PeerSeedProtos.SignedPeerSeeds parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static org.bitcoin.crawler.PeerSeedProtos.SignedPeerSeeds parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {

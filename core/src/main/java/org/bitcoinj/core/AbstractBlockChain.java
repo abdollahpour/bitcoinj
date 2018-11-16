@@ -28,6 +28,7 @@ import org.bitcoinj.wallet.Wallet;
 import org.slf4j.*;
 
 import javax.annotation.*;
+import java.math.BigInteger;
 import java.util.*;
 import java.util.concurrent.*;
 import java.util.concurrent.locks.*;
@@ -349,7 +350,7 @@ public abstract class AbstractBlockChain {
      * Accessing block's transactions in another thread while this method runs may result in undefined behavior.
      */
     public boolean add(Block block) throws VerificationException, PrunedException {
-        try {
+        /*try {
             return add(block, true, null, null);
         } catch (BlockStoreException e) {
             // TODO: Figure out a better way to propagate this exception to the user.
@@ -362,7 +363,14 @@ public abstract class AbstractBlockChain {
             }
             throw new VerificationException("Could not verify block:\n" +
                     block.toString(), e);
+        }*/
+        for (Transaction t:block.getTransactions()) {
+            for (TransactionOutput o:t.getOutputs()) {
+                System.out.println(o.getScriptPubKey().getToAddress(params));
+            }
         }
+        informListenersForNewBlock(block, NewBlockType.BEST_CHAIN, null, null, new StoredBlock(block, BigInteger.ZERO, 0));
+        return true;
     }
     
     /**

@@ -222,7 +222,7 @@ public final class ServerState {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       if (getChannelsCount() > 0) {
         hash = (37 * hash) + CHANNELS_FIELD_NUMBER;
         hash = (53 * hash) + getChannelsList().hashCode();
@@ -232,6 +232,17 @@ public final class ServerState {
       return hash;
     }
 
+    public static org.bitcoinj.protocols.channels.ServerState.StoredServerPaymentChannels parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.bitcoinj.protocols.channels.ServerState.StoredServerPaymentChannels parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static org.bitcoinj.protocols.channels.ServerState.StoredServerPaymentChannels parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -1266,7 +1277,7 @@ public final class ServerState {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       if (hasBestValueToMe()) {
         hash = (37 * hash) + BESTVALUETOME_FIELD_NUMBER;
         hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
@@ -1306,6 +1317,17 @@ public final class ServerState {
       return hash;
     }
 
+    public static org.bitcoinj.protocols.channels.ServerState.StoredServerPaymentChannel parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.bitcoinj.protocols.channels.ServerState.StoredServerPaymentChannel parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
     public static org.bitcoinj.protocols.channels.ServerState.StoredServerPaymentChannel parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
